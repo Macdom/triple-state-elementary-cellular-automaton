@@ -121,15 +121,15 @@ function pushToColorArrays(colorCounts, redY, greenY, blueY){
 function drawCell(cell, colorCounts){
 	if(cell === 0){
 		colorCounts.red++;
-    	return '<font color="red">⬤</font>';
+    	return '<span class="red">⬤</span>';
 	}
     else if (cell === 1){
 		colorCounts.green++;
-    	return '<font color="lime">⬤</font>'
+    	return '<span class="green">⬤</span>'
 	}
    	else if (cell === 2){
 		colorCounts.blue++;
-    	return '<font color="deepskyblue">⬤</font>'
+    	return '<span class="blue">⬤</span>'
 	}
 }
 
