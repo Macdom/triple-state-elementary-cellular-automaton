@@ -211,4 +211,5 @@ function resetAutomaton(){
 	startBtn.disabled = "";
 	automatonField.innerHTML = "";
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	window.location.reload();
 }
