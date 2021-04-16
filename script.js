@@ -1,6 +1,7 @@
 builtInDiv = document.querySelector("#builtIn");
 startBtn = document.querySelector("#startBtn");
 stopBtn = document.querySelector("#stopBtn");
+setRulesBtn = document.querySelector("#setBtn");
 resetBtn = document.querySelector("#resetBtn");
 automatonField = document.querySelector("#automatonField");
 canvas = document.querySelector('#plot');
@@ -135,6 +136,7 @@ function drawCell(cell, colorCounts){
 
 async function startAutomaton(){
 	startBtn.disabled = "disabled";
+	setBtn.disabled = "disabled";
 	stopBtn.disabled = "";
 	stopped = 0;
 	
@@ -209,7 +211,9 @@ function resetAutomaton(){
 	redY = []; greenY = []; blueY = [];
 	stopBtn.disabled = "disabled";
 	startBtn.disabled = "";
+	setBtn.disabled = "";
 	automatonField.innerHTML = "";
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	
 	window.location.reload();
 }
