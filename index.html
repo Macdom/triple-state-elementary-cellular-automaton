@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <title>Cellular automatons - project 1</title>
+  <meta HTTP-EQUIV="Content-Type" content="text/html"; charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+	<div class="container">
+	<div class="jumbotron"><h1>Cellular automatons - project 1</h1></div>
+	<div class="row">
+	<div class="col" id="rulesField">
+		<span id="radio000">
+		<label for="000"><b>000:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="000" id="radio000_0" value="0">
+			  <label class="form-check-label red" for="000_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="000" id="radio000_1" value="1">
+			  <label class="form-check-label green" for="000_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="000" id="radio000_2" value="2">
+			  <label class="form-check-label blue" for="000_2">2</label>
+			</div>
+		</span>
+		<span id="radio001">
+		<label for="001"><b>001:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="001" id="radio001_0" value="0">
+			  <label class="form-check-label red" for="001_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="001" id="radio001_1" value="1">
+			  <label class="form-check-label green" for="001_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="001" id="radio001_2" value="2">
+			  <label class="form-check-label blue" for="001_2">2</label>
+			</div>
+		</span>
+		<span id="radio002">
+		<label for="002"><b>002:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="002" id="radio002_0" value="0">
+			  <label class="form-check-label red" for="002_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="002" id="radio002_1" value="1">
+			  <label class="form-check-label green" for="002_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="002" id="radio002_2" value="2">
+			  <label class="form-check-label blue" for="002_2">2</label>
+			</div>
+		</span>
+		<br/>
+		
+		<span id="radio010">
+		<label for="010"><b>010:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="010" id="radio010_0" value="0">
+			  <label class="form-check-label red" for="010_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="010" id="radio010_1" value="1">
+			  <label class="form-check-label green" for="010_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="010" id="radio010_2" value="2">
+			  <label class="form-check-label blue" for="010_2">2</label>
+			</div>
+		</span>
+		<span id="radio011">
+		<label for="011"><b>011:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="011" id="radio011_0" value="0">
+			  <label class="form-check-label red" for="011_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="011" id="radio011_1" value="1">
+			  <label class="form-check-label green" for="011_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="011" id="radio011_2" value="2">
+			  <label class="form-check-label blue" for="011_2">2</label>
+			</div>
+		</span>
+		<span id="radio012">
+		<label for="012"><b>012:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="012" id="radio012_0" value="0">
+			  <label class="form-check-label red" for="012_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="012" id="radio012_1" value="1">
+			  <label class="form-check-label green" for="012_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="012" id="radio012_2" value="2">
+			  <label class="form-check-label blue" for="012_2">2</label>
+			</div>
+		</span>
+		<br/>
+		
+		<span id="radio020">
+		<label for="020"><b>020:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="020" id="radio020_0" value="0">
+			  <label class="form-check-label red" for="020_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="020" id="radio020_1" value="1">
+			  <label class="form-check-label green" for="020_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="020" id="radio020_2" value="2">
+			  <label class="form-check-label blue" for="020_2">2</label>
+			</div>
+		</span>
+		<span id="radio021">
+		<label for="021"><b>021:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="021" id="radio021_0" value="0">
+			  <label class="form-check-label red" for="021_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="021" id="radio021_1" value="1">
+			  <label class="form-check-label green" for="021_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="021" id="radio021_2" value="2">
+			  <label class="form-check-label blue" for="021_2">2</label>
+			</div>
+		</span>
+		<span id="radio022">
+		<label for="022"><b>022:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="022" id="radio022_0" value="0">
+			  <label class="form-check-label red" for="022_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="022" id="radio022_1" value="1">
+			  <label class="form-check-label green" for="022_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="022" id="radio022_2" value="2">
+			  <label class="form-check-label blue" for="022_2">2</label>
+			</div>
+		</span>
+		<br/>
+		
+		<span id="radio100">
+		<label for="100"><b>100:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="100" id="radio100_0" value="0">
+			  <label class="form-check-label red" for="100_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="100" id="radio100_1" value="1">
+			  <label class="form-check-label green" for="100_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="100" id="radio100_2" value="2">
+			  <label class="form-check-label blue" for="100_2">2</label>
+			</div>
+		</span>
+		<span id="radio101">
+		<label for="101"><b>101:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="101" id="radio101_0" value="0">
+			  <label class="form-check-label red" for="101_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="101" id="radio101_1" value="1">
+			  <label class="form-check-label green" for="101_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="101" id="radio101_2" value="2">
+			  <label class="form-check-label blue" for="101_2">2</label>
+			</div>
+		</span>
+		<span id="radio102">
+		<label for="102"><b>102:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="102" id="radio102_0" value="0">
+			  <label class="form-check-label red" for="102_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="102" id="radio102_1" value="1">
+			  <label class="form-check-label green" for="102_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="102" id="radio102_2" value="2">
+			  <label class="form-check-label blue" for="102_2">2</label>
+			</div>
+		</span>
+		<br/>
+		
+		<span id="radio110">
+		<label for="110"><b>110:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="110" id="radio110_0" value="0">
+			  <label class="form-check-label red" for="110_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="110" id="radio110_1" value="1">
+			  <label class="form-check-label green" for="110_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="110" id="radio110_2" value="2">
+			  <label class="form-check-label blue" for="110_2">2</label>
+			</div>
+		</span>
+		<span id="radio111">
+		<label for="111"><b>111:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="111" id="radio111_0" value="0">
+			  <label class="form-check-label red" for="111_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="111" id="radio111_1" value="1">
+			  <label class="form-check-label green" for="111_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="111" id="radio111_2" value="2">
+			  <label class="form-check-label blue" for="111_2">2</label>
+			</div>
+		</span>
+		<span id="radio112">
+		<label for="112"><b>112:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="112" id="radio112_0" value="0">
+			  <label class="form-check-label red" for="112_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="112" id="radio112_1" value="1">
+			  <label class="form-check-label green" for="112_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="112" id="radio112_2" value="2">
+			  <label class="form-check-label blue" for="112_2">2</label>
+			</div>
+		</span>
+		<br/>
+		
+		<span id="radio120">
+		<label for="120"><b>120:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="120" id="radio120_0" value="0">
+			  <label class="form-check-label red" for="120_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="120" id="radio120_1" value="1">
+			  <label class="form-check-label green" for="120_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="120" id="radio120_2" value="2">
+			  <label class="form-check-label blue" for="120_2">2</label>
+			</div>
+		</span>
+		<span id="radio121">
+		<label for="121"><b>121:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="121" id="radio121_0" value="0">
+			  <label class="form-check-label red" for="121_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="121" id="radio121_1" value="1">
+			  <label class="form-check-label green" for="121_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="121" id="radio121_2" value="2">
+			  <label class="form-check-label blue" for="121_2">2</label>
+			</div>
+		</span>
+		<span id="radio122">
+		<label for="122"><b>122:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="122" id="radio122_0" value="0">
+			  <label class="form-check-label red" for="122_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="122" id="radio122_1" value="1">
+			  <label class="form-check-label green" for="122_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="122" id="radio122_2" value="2">
+			  <label class="form-check-label blue" for="122_2">2</label>
+			</div>
+		</span>
+		<br/>
+		
+		<span id="radio200">
+		<label for="200"><b>200:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="200" id="radio200_0" value="0">
+			  <label class="form-check-label red" for="200_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="200" id="radio200_1" value="1">
+			  <label class="form-check-label green" for="200_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="200" id="radio200_2" value="2">
+			  <label class="form-check-label blue" for="200_2">2</label>
+			</div>
+		</span>
+		<span id="radio201">
+		<label for="201"><b>201:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="201" id="radio201_0" value="0">
+			  <label class="form-check-label red" for="201_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="201" id="radio201_1" value="1">
+			  <label class="form-check-label green" for="201_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="201" id="radio201_2" value="2">
+			  <label class="form-check-label blue" for="201_2">2</label>
+			</div>
+		</span>
+		<span id="radio202">
+		<label for="202"><b>202:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="202" id="radio202_0" value="0">
+			  <label class="form-check-label red" for="202_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="202" id="radio202_1" value="1">
+			  <label class="form-check-label green" for="202_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="202" id="radio202_2" value="2">
+			  <label class="form-check-label blue" for="202_2">2</label>
+			</div>
+		</span>
+		<br/>
+		
+		<span id="radio210">
+		<label for="210"><b>210:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="210" id="radio210_0" value="0">
+			  <label class="form-check-label red" for="210_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="210" id="radio210_1" value="1">
+			  <label class="form-check-label green" for="210_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="210" id="radio210_2" value="2">
+			  <label class="form-check-label blue" for="210_2">2</label>
+			</div>
+		</span>
+		<span id="radio211">
+		<label for="211"><b>211:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="211" id="radio211_0" value="0">
+			  <label class="form-check-label red" for="211_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="211" id="radio211_1" value="1">
+			  <label class="form-check-label green" for="211_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="211" id="radio211_2" value="2">
+			  <label class="form-check-label blue" for="211_2">2</label>
+			</div>
+		</span>
+		<span id="radio212">
+		<label for="212"><b>212:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="212" id="radio212_0" value="0">
+			  <label class="form-check-label red" for="212_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="212" id="radio212_1" value="1">
+			  <label class="form-check-label green" for="212_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="212" id="radio212_2" value="2">
+			  <label class="form-check-label blue" for="212_2">2</label>
+			</div>
+		</span>
+		<br/>
+		
+		<span id="radio220">
+		<label for="220"><b>220:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="220" id="radio220_0" value="0">
+			  <label class="form-check-label red" for="220_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="220" id="radio220_1" value="1">
+			  <label class="form-check-label green" for="220_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="220" id="radio220_2" value="2">
+			  <label class="form-check-label blue" for="220_2">2</label>
+			</div>
+		</span>
+		<span id="radio221">
+		<label for="221"><b>221:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="221" id="radio221_0" value="0">
+			  <label class="form-check-label red" for="221_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="221" id="radio221_1" value="1">
+			  <label class="form-check-label green" for="221_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="221" id="radio221_2" value="2">
+			  <label class="form-check-label blue" for="221_2">2</label>
+			</div>
+		</span>
+		<span id="radio222">
+		<label for="222"><b>222:</b></label>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="222" id="radio222_0" value="0">
+			  <label class="form-check-label red" for="222_0">0</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="222" id="radio222_1" value="1">
+			  <label class="form-check-label green" for="222_1">1</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="222" id="radio222_2" value="2">
+			  <label class="form-check-label blue" for="222_2">2</label>
+			</div>
+		</span><br/>
+		<button class="btn btn-info" id="setBtn" onclick="setRules()">Set rules</button>
+	<hr/>
+	</div>
+	<div class="col" id="plotField">
+	<canvas id="plot" width="550" height="280"></canvas>
+
+	</div>
+	</div>
+	<button class="btn btn-success" id="startBtn" onclick="startAutomaton()" disabled>Run</button>
+	<button class="btn btn-danger" id="stopBtn"onclick="stopAutomaton()" disabled>Stop</button>
+	<button class="btn btn-warning" id="resetBtn"onclick="resetAutomaton()">Reset</button>
+	
+	<p id="automatonField"></p>
+</body>
